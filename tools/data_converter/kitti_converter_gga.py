@@ -17,10 +17,9 @@ import cv2
 # from tools.visual_for_pts import show_points_and_bboxes_in_cluster
 # from tools.some_function import calculate_simliar
 
-# from tools.utils_gga import project_pts_on_img, calculate_ground_fgr, points_in_frustm_indices, region_grow_fgr
 from collections import Counter
 
-from tools.data_converter.utils_gga import project_pts_on_img, calculate_ground_fgr, points_in_frustm_indices, region_grow_fgr
+from tools.data_converter.utils_gga import project_pts_on_img, calculate_ground, points_in_frustm_indices, region_grow
 
 import os
 from multiprocessing import Pool
@@ -74,14 +73,14 @@ def create_kitti_info_file(data_path,
     # mp.set_start_method("spawn")
     pool = Pool(processes=60)
     for info in kitti_infos_train:
-        pool.apply_async(_calculate_FGR, (data_path, info, relative_path))
-        # _calculate_FGR(data_path, info, relative_path)
+        pool.apply_async(_calculate_rga, (data_path, info, relative_path))
+        # _calculate_rga(data_path, info, relative_path)
     pool.close()
     pool.join()
 
     # for debug
     # for info in kitti_infos_train:
-    #     _calculate_FGR(data_path, info, relative_path)
+    #     _calculate_rga(data_path, info, relative_path)
 
     train_split_path = './data/kitti/ImageSets/train.txt'
     with open(train_split_path, 'r') as file:
@@ -112,8 +111,8 @@ def create_kitti_info_file(data_path,
 
     pool = Pool(processes=60)
     for info in kitti_infos_val:
-        pool.apply_async(_calculate_FGR, (data_path, info, relative_path))
-        # _calculate_FGR(data_path, info, relative_path)
+        pool.apply_async(_calculate_rga, (data_path, info, relative_path))
+        # _calculate_rga(data_path, info, relative_path)
     pool.close()
     pool.join()
 
@@ -212,7 +211,7 @@ def boundary_range(final_coords, img_size):
 
     return in_boundary_flags
 
-def _calculate_FGR(data_path,
+def _calculate_rga(data_path,
                     info,
                     relative_path,
                     remove_outside=True,
@@ -247,7 +246,7 @@ def _calculate_FGR(data_path,
     points_shape = list(points_lidar.shape[0:-1])
     points_lidar = np.concatenate([points_lidar, np.ones(points_shape + [1])], axis=-1)
     points_cam = points_lidar @ (rect @ Trv2c).T
-    mask_ground_all, _ = calculate_ground_fgr(points_cam[..., :3], 0.2)
+    mask_ground_all, _ = calculate_ground(points_cam[..., :3], 0.2)
     ground_plane_height = points_lidar[(1 - mask_ground_all).astype(np.bool_)][:, 2].mean()
 
     annos = info['annos']
@@ -375,7 +374,7 @@ def _calculate_FGR(data_path,
             filter_z = points_cam[:, 2] > 0
             mask_search = mask_ground_all * object_filter_all * mask_object * filter_z
             mask_origin = mask_ground_all * object_filter * mask_object * filter_z
-            mask_seg = region_grow_fgr(points_cam.copy(), mask_search, mask_origin, thresh, ratio)
+            mask_seg = region_grow(points_cam.copy(), mask_search, mask_origin, thresh, ratio)
             
             if mask_seg.sum() == 0:
                 continue
@@ -403,7 +402,7 @@ def _calculate_FGR(data_path,
             mask_origin_new = mask_seg_best
             mask_search_new = mask_ground_all
             thresh_new      = (best_j + 1) * 0.1
-            mask_seg_for_truncate = region_grow_fgr(points_cam.copy(), mask_search_new, mask_origin_new, thresh_new, ratio=None)
+            mask_seg_for_truncate = region_grow(points_cam.copy(), mask_search_new, mask_origin_new, thresh_new, ratio=None)
             pc_truncate = points_lidar[mask_seg_for_truncate == 1].copy()
             if pc_truncate.shape[0] > 6000:
                 points_cluster.append(pc)

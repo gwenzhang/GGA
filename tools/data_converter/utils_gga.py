@@ -3,7 +3,7 @@ from mmdet3d.core.bbox.box_np_ops import projection_matrix_to_CRT_kitti, get_fru
     corner_to_surfaces_3d_jit, points_in_convex_polygon_3d_jit
 
 
-def region_grow_fgr(pc, mask_search, mask_origin, thresh, ratio=0.8):
+def region_grow(pc, mask_search, mask_origin, thresh, ratio=0.8):
     pc_search = pc[mask_search==1]
     mask = mask_origin.copy()
     best_len = 0
@@ -101,7 +101,7 @@ def points_in_frustm_indices(points, rect, Trv2c, P2, bbox_shape):
     return indices
 
 
-def calculate_ground_fgr(point_cloud, thresh_ransac=0.15, back_cut=False, back_cut_z=-5.0):
+def calculate_ground(point_cloud, thresh_ransac=0.15, back_cut=False, back_cut_z=-5.0):
 
     if back_cut:
         point_cloud = point_cloud[point_cloud[:,2] > back_cut_z]   # camera frame 3 x N

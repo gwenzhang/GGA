@@ -83,7 +83,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 </table>
 
 #### Indoor Point Cloud 3D Object Detection (on SUN-RGBD)  
-<table>
+<table style="width:100%; text-align:center;">
   <thead>
     <tr>
       <th>Model</th>

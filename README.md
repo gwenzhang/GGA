@@ -15,7 +15,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 
 ## 📘TODO  
 - [x] Release the code of KITTI.  
-- [ ] Release the arXiv version.  
+- [ ] Release the arxiv version.  
 - [ ] Release the pseudo labels.  
 - [ ] Release more detail results.  
 

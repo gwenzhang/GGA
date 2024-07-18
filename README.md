@@ -7,9 +7,9 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 -[24-07-18] Code of KITTI is released.
 
 ## 👀Overview  
-- [📘 TODO](https://github.com/gwenzhang/GGA#TODO)  
-- [🚀 Main Results](https://github.com/gwenzhang/GGA#main-results)  
-- [🛠️ Quick Start](https://github.com/gwenzhang/GGA#quick-start)  
+- [📘 TODO](https://github.com/gwenzhang/GGA#📘todo)  
+- [🚀 Main Results](https://github.com/gwenzhang/GGA#🏆Mmin-results)  
+- [🛠️ Quick Start](https://github.com/gwenzhang/GGA#🚀quick-start)  
 - [📘 Citation](https://github.com/gwenzhang/GGA#citation)  
 - [🚀 Acknowledgments](https://github.com/gwenzhang/GGA#acknowledgments)  
 
@@ -20,7 +20,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 - [ ] Release more detail results.  
 
 
-### 🏆 Main Results
+### 🏆Main Results
 
 #### Outdoor Monocular 3D Object Detection (on KITTI test)  
 
@@ -222,7 +222,7 @@ Please consider citing our work as follows if it is helpful.
 ```
 
 ## Acknowledgments
-GGA is based on MMDetection3D.
+GGA is based on MMDetection3D.  
 We also thank the FGR, MonoDETR, PDG, CenterPoint and FCAF3D authors for their efforts.
 
 

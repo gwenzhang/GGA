@@ -74,7 +74,46 @@ mmdetection3d
 │   ├── kitti_GGA_split_file
 ```
 
-### Training (Generate Pseudo 3D Labels)  
+### Training GGA  
+```
+./tools/dist_train.sh configs/gga/gga_kitti_config.py 8  
+```
+
+### Generate Pseudo 3D Labels  
+```
+./tools/dist_pseudo.sh configs/gga/gga_kitti_matching_config.py {checkpoints} 8  --eval mAP  
+python create_data_gga_retrain_mono.py kitti --root_path ./data/kitti --out_dir ./data/kitti  
+```
+* The format of the generated data is as follows:  
+```
+mmdetection3d
+├── data
+│   ├── kitti
+│   │   ├── ImageSets
+│   │   ├── testing
+│   │   ├── training
+│   │   ├── kitti_gt_database_GGA
+│   │   ├── kitti_infos_train_GGA.pkl
+│   │   ├── kitti_infos_val_GGA.pkl
+│   │   ├── kitti_infos_trainval_GGA.pkl
+│   │   ├── kitti_infos_test.pkl
+│   │   ├── kitti_dbinfos_train_GGA.pkl
+│   │   ├── kitti_infos_trainval_GGA_mono3d.coco.json
+│   │   ├── kitti_infos_test_mono3d.coco.json
+│   ├── kitti_GGA_split_file
+```
+
+### Retraining  
+ ```
+./tools/dist_train.sh configs/gga/gga_pgd.py 8  
+```
+
+### Testing (Generate submission files)
+ ```
+./tools/dist_test.sh configs/gga/gga_pgd.py {checkpoint_dir} 8  --format-only --eval-options 'pklfile_prefix=./gga_results' 'submission_prefix=./gga_results' 
+```
+
+
 
 
 

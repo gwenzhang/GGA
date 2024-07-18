@@ -28,7 +28,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
       <th colspan="3">AP_{3D}</th>
     </tr>
     <tr>
-      <th></th>
+      <th>PGD+GGA</th>
       <th>Easy</th>
       <th>Mod.</th>
       <th>Hard</th>

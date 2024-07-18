@@ -18,7 +18,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 
 ### Main Results  
 
-## Quick Start  
+## 🚀Quick Start  
 ### Installation  
 ```shell
 conda create --name gga python=3.8 -y  
@@ -32,7 +32,6 @@ git clone https://github.com/gwenzhang/GGA.git
 cd GGA  
 pip install -e .  
 ```
-
 
 ### Data Preparation  
 #### KITTI  

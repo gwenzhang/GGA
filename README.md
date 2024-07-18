@@ -82,6 +82,42 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
   </tbody>
 </table>
 
+#### Indoor Point Cloud 3D Object Detection (on SUN-RGBD)  
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>bathtub</th>
+      <th>bed</th>
+      <th>bkshelf</th>
+      <th>chair</th>
+      <th>desk</th>
+      <th>dresser</th>
+      <th>nstand</th>
+      <th>sofa</th>
+      <th>table</th>
+      <th>toilet</th>
+      <th>mAP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FCAF3D+GGA</td>
+      <td>55.4</td>
+      <td>69.9</td>
+      <td>22.4</td>
+      <td>59.1</td>
+      <td>22.5</td>
+      <td>31.3</td>
+      <td>59.3</td>
+      <td>58.9</td>
+      <td>34.8</td>
+      <td>71.4</td>
+      <td>48.5</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 🚀Quick Start  
 ### Installation  
 ```shell

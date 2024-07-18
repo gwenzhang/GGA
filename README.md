@@ -55,10 +55,26 @@ mmdetection3d
 ```python 
 cd GGA  
 python ./tools/create_data_gga.py kitti --root_path ./data/kitti --out_dir ./data/kitti  
+# Create dataset info file, and lidar pseudo database
+```
+* The format of the generated data is as follows:  
+```
+mmdetection3d
+├── data
+│   ├── kitti
+│   │   ├── ImageSets
+│   │   ├── testing
+│   │   ├── training
+│   │   ├── kitti_gt_database_GGA
+│   │   ├── kitti_infos_train_GGA.pkl
+│   │   ├── kitti_infos_val_GGA.pkl
+│   │   ├── kitti_infos_trainval_GGA.pkl
+│   │   ├── kitti_infos_test.pkl
+│   │   ├── kitti_dbinfos_train_GGA.pkl
+│   ├── kitti_GGA_split_file
 ```
 
-* The format of the generated data is as follows:  
-
+### Training (Generate Pseudo 3D Labels)  
 
 
 

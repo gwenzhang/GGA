@@ -24,8 +24,8 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
   <thead>
     <tr>
       <th>KITTI</th>
-      <th colspan="3">AP_{BEV}</th>
-      <th colspan="3">AP_{3D}</th>
+      <th colspan="3">AP<sub>BEV</th>
+      <th colspan="3">AP<sub>3D</th>
     </tr>
     <tr>
       <th>PGD+GGA</th>

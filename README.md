@@ -50,6 +50,38 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
   </tbody>
 </table>
 
+#### Monocular 3D Object Detection (on KITTI validation)  
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3">AP<sub>BEV</th>
+      <th colspan="3">AP<sub>3D</th>
+    </tr>
+    <tr>
+      <th>Model</th>
+      <th>Easy</th>
+      <th>Mod.</th>
+      <th>Hard</th>
+      <th>Easy</th>
+      <th>Mod.</th>
+      <th>Hard</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MonoDETR+GGA</td>
+      <td>30.07</td>
+      <td>21.49</td>
+      <td>18.23</td>
+      <td>21.18</td>
+      <td>14.96</td>
+      <td>10.89</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 🚀Quick Start  
 ### Installation  
 ```shell

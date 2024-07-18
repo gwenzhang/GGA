@@ -24,8 +24,6 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 |---------|--------|--------|--------|--------|--------|--------|
 |  PGD+GGA |  17.42  |  10.21  |  8.09  |  10.42  |  6.08  |  4.65  |
 
-APBEV/AP3DCar(Iou=0.7)
-
 ## 🚀Quick Start  
 ### Installation  
 ```shell

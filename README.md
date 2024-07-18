@@ -20,3 +20,38 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 
 ## Quick Start  
 ### Installation  
+```shell
+conda create --name gga python=3.8 -y  
+conda activate gga  
+conda install pytorch torchvision -c pytorch  
+pip install openmim  
+mim install mmcv-full  
+mim install mmdet  
+mim install mmsegmentation  
+git clone https://github.com/gwenzhang/GGA.git  
+cd GGA  
+pip install -e .  
+```
+
+
+### Data Preparation  
+```
+mmdetection3d
+├── mmdet3d
+├── tools
+├── configs
+├── data
+│   ├── kitti
+│   │   ├── ImageSets
+│   │   ├── testing
+│   │   │   ├── calib
+│   │   │   ├── image_2
+│   │   │   ├── velodyne
+│   │   ├── training
+│   │   │   ├── calib
+│   │   │   ├── image_2
+│   │   │   ├── label_2
+│   │   │   ├── velodyne
+```
+
+

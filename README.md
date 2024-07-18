@@ -16,13 +16,15 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 - [ ] Release more detail results.  
 
 
-### 🏆Main Results  
-####  Monocular 3D Object Detection (on KITTI test)  
-|  KITTI  |        AP_{BEV}      |       AP_{3D}        |
-|---------|---------|--------|--------|---------|---------|--------|
+### 🏆 Main Results
+
+#### Monocular 3D Object Detection (on KITTI test)  
+
+|  KITTI  |      AP_{BEV}       |        AP_{3D}       |
+|---------|----------------------|----------------------|
 |  Model  |  Easy  |  Mod.  |  Hard  |  Easy  |  Mod.  |  Hard  |
 |---------|--------|--------|--------|--------|--------|--------|
-|  PGD+GGA |  17.42  |  10.21  |  8.09  |  10.42  |  6.08  |  4.65  |
+| PGD+GGA |  17.42 |  10.21 |  8.09  |  10.42 |  6.08  |  4.65  |
 
 ## 🚀Quick Start  
 ### Installation  

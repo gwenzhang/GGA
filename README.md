@@ -18,7 +18,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 
 ### 🏆 Main Results
 
-#### Monocular 3D Object Detection (on KITTI test)  
+#### Outdoor Monocular 3D Object Detection (on KITTI test)  
 
 <table>
   <thead>
@@ -50,7 +50,7 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
   </tbody>
 </table>
 
-#### Monocular 3D Object Detection (on KITTI validation)  
+#### Outdoor Monocular 3D Object Detection (on KITTI validation)  
 
 <table>
   <thead>

@@ -2,21 +2,28 @@
 
 This repo is the official implementation of ECCV24 paper [General Geometry-aware (GGA) Weakly Supervised 3D Object Detection](). Our GGA exhibits promising generalization capabilites, allowing it to be easily extend to various novel scenarios and classes. GGA achieves state-of-the-art performance on 2D bbox-supervised Monocular 3D object Detection. GGA is built on the codebase of [MMDetection3D](https://github.com/open-mmlab/mmdetection3d/tree/dev-1.0).
 
-## News
+## 🔥News
 -[24-07-04] Our GGA is accepted by ECCV'24 🎉🎉🎉, if you find it helpful, please give it a star.  
 -[24-07-18] Code of KITTI is released.
 
 ## Overview  
 
 
-## TODO  
+## 📘TODO  
 - [x] Release the code of KITTI.  
 - [ ] Release the arXiv version.  
 - [ ] Release the pseudo labels.  
 - [ ] Release more detail results.  
 
 
-### Main Results  
+### 🏆Main Results  
+####  Monocular 3D Object Detection (on KITTI test)  
+|  Model  |        AP_{BEV}      | AP_{3D}              |
+|         | Easy. | Mod. | Hard. | Easy. | Mod. | Hard. |
+|---------|---------|--------|--------|---------|---------|--------|
+|  PGD+GGA | 74.1 | 70.5 | 24.4 | 23.3 | 25.7 | 24.1 |
+
+APBEV/AP3DCar(Iou=0.7)
 
 ## 🚀Quick Start  
 ### Installation  

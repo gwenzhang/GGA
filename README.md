@@ -35,11 +35,9 @@ pip install -e .
 
 
 ### Data Preparation  
+#### KITTI  
 ```
 mmdetection3d
-├── mmdet3d
-├── tools
-├── configs
 ├── data
 │   ├── kitti
 │   │   ├── ImageSets
@@ -53,5 +51,14 @@ mmdetection3d
 │   │   │   ├── label_2
 │   │   │   ├── velodyne
 ```
+* Generate the data infos by running the following command (it may take several hours):  
+```python 
+cd GGA  
+python ./tools/create_data_gga.py kitti --root_path ./data/kitti --out_dir ./data/kitti  
+```
+
+* The format of the generated data is as follows:  
+
+
 
 

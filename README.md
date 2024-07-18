@@ -6,8 +6,12 @@ This repo is the official implementation of ECCV24 paper [General Geometry-aware
 -[24-07-04] Our GGA is accepted by ECCV'24 🎉🎉🎉, if you find it helpful, please give it a star.  
 -[24-07-18] Code of KITTI is released.
 
-## Overview  
-
+## 👀Overview  
+- [📘 TODO](https://github.com/gwenzhang/GGA#TODO)  
+- [🚀 Main Results](https://github.com/gwenzhang/GGA#main-results)  
+- [🛠️ Quick Start](https://github.com/gwenzhang/GGA#quick-start)  
+- [📘 Citation](https://github.com/gwenzhang/GGA#citation)  
+- [🚀 Acknowledgments](https://github.com/gwenzhang/GGA#acknowledgments)  
 
 ## 📘TODO  
 - [x] Release the code of KITTI.  
@@ -212,6 +216,14 @@ mmdetection3d
 ./tools/dist_test.sh configs/gga/gga_pgd.py {checkpoint_dir} 8  --format-only --eval-options 'pklfile_prefix=./gga_results' 'submission_prefix=./gga_results' 
 ```
 
+## Citation
+Please consider citing our work as follows if it is helpful.
+```
+```
+
+## Acknowledgments
+GGA is based on MMDetection3D.
+We also thank the FGR, MonoDETR, PDG, CenterPoint and FCAF3D authors for their efforts.
 
 
 

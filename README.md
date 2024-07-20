@@ -225,8 +225,8 @@ Please consider citing our work as follows if it is helpful.
   title={General Geometry-aware Weakly Supervised 3D Object Detection},
   author={Zhang, Guowen and Fan, Junsong and Chen, Liyi and Zhang, Zhaoxiang and Lei, Zhen and Zhang, Lei},
   booktitle={European Conference on Computer Vision},
-  organization={Springer}
-  year={2024}
+  organization={Springer},
+  year={2024},
 }
 ```
 

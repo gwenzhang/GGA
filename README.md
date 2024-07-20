@@ -221,6 +221,12 @@ mmdetection3d
 ## Citation
 Please consider citing our work as follows if it is helpful.
 ```
+@article{zhang2024general,
+  title={General Geometry-aware Weakly Supervised 3D Object Detection},
+  author={Zhang, Guowen and Fan, Junsong and Chen, Liyi and Zhang, Zhaoxiang and Lei, Zhen and Zhang, Lei},
+  journal={arXiv preprint arXiv:2407.13748},
+  year={2024}
+}
 ```
 
 ## Acknowledgments

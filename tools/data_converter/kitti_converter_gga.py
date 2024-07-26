@@ -366,7 +366,10 @@ def _calculate_rga(data_path,
         mask_seg_list = []
 
         thresh_seg_max = 7
-        ratio = 0.95
+        if name[element] == 'Car':
+            ratio = 0.96
+        else:
+            ratio = 0.85
         curr_box = boxes_img[element]
         for j in range(thresh_seg_max):
             thresh = (j + 1) * 0.1
@@ -601,9 +604,9 @@ def create_reduced_point_cloud(data_path,
             Default: False.
     """
     if train_info_path is None:
-        train_info_path = Path(data_path) / f'{pkl_prefix}_infos_train.pkl'
+        train_info_path = Path(data_path) / f'{pkl_prefix}_infos_train_GGA.pkl'
     if val_info_path is None:
-        val_info_path = Path(data_path) / f'{pkl_prefix}_infos_val.pkl'
+        val_info_path = Path(data_path) / f'{pkl_prefix}_infos_val_GGA.pkl'
     if test_info_path is None:
         test_info_path = Path(data_path) / f'{pkl_prefix}_infos_test.pkl'
 
